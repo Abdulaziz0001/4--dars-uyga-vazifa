@@ -26,6 +26,7 @@ class Car(models.Model):
     info = models.TextField()
     color = models.ForeignKey(Color, on_delete=models.CASCADE)
     brand = models.ForeignKey(Brand, on_delete=models.CASCADE)
+    email = models.EmailField()
 
     def __str__(self):
         return self.name
@@ -34,4 +35,6 @@ class Car(models.Model):
         verbose_name_plural = "Mashinalar"
         verbose_name = "Mashina "
         ordering = ['name']
+
+
 
